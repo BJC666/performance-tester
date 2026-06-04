@@ -110,9 +110,6 @@ User asks: "性能审查" "perf review" "why is this slow"
 - Analyzing a single file or a full request lifecycle
 
 **When NOT to use:**
-- General code review (use `superpowers:requesting-code-review`)
-- Security audit (use `bork:review-security`)
-- Simple linting or style checks
 - When there is no code to analyze
 
 ## Default Performance Targets

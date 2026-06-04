@@ -84,12 +84,8 @@ npx skills add BJC666/performance-tester -a claude-code
 - ✅ 全栈请求生命周期分析
 - ✅ PR 的性能影响评估
 - ✅ 单文件或完整请求路径
-
-## 不适用场景
-
-- ❌ 通用代码审查（用常规 code review skill）
-- ❌ 安全审计
-- ❌ 语法 / 风格检查
+- ✅ 通用代码审查（性能视角）
+- ✅ 语法 / 风格检查中隐藏的性能反模式
 
 ## 兼容性
 
