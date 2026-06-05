@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "典型场景：后端 API 性能审查",
+    "prompt": "帮我审查这段代码的性能：\n\n```typescript\nasync function getOrders(userId: number) {\n  const user = await db.query('SELECT * FROM users WHERE id = ' + userId);\n  const orders = await db.query('SELECT * FROM orders WHERE user_id = ' + userId);\n  \n  for (const order of orders) {\n    order.items = await db.query('SELECT * FROM items WHERE order_id = ' + order.id);\n    for (const item of order.items) {\n      item.product = await db.query('SELECT * FROM products WHERE id = ' + item.productId);\n    }\n  }\n  \n  console.log('Orders fetched:', JSON.stringify(orders));\n  return orders;\n}\n```",
+    "expected": "应输出：预算表+因果图（N+1嵌套）+人格旅程+至少2个高级维度。核心发现：嵌套N+1查询（orders→items→products三层循环查询）、SQL注入风险、日志序列化开销"
+  },
+  {
+    "id": 2,
+    "name": "复杂场景：前端渲染性能",
+    "prompt": "审查这个 React 组件的性能问题：\n\n```tsx\nfunction ProductList({ categoryId }: { categoryId: number }) {\n  const [products, setProducts] = useState([]);\n  const [searchTerm, setSearchTerm] = useState('');\n  \n  useEffect(() => {\n    fetch(`/api/products?category=${categoryId}`)\n      .then(r => r.json())\n      .then(data => setProducts(data));\n  }, [categoryId]);\n  \n  const filteredProducts = products.filter(p => \n    p.name.toLowerCase().includes(searchTerm.toLowerCase())\n  );\n  \n  return (\n    <div>\n      <input \n        value={searchTerm} \n        onChange={e => setSearchTerm(e.target.value)} \n        placeholder=\"搜索产品...\"\n      />\n      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)' }}>\n        {filteredProducts.map((p, i) => (\n          <ProductCard key={i} product={p} onAddToCart={() => {\n            fetch('/api/cart', { method: 'POST', body: JSON.stringify({ productId: p.id }) });\n          }} />\n        ))}\n      </div>\n    </div>\n  );\n}\n```",
+    "expected": "应输出：预算表+因果图+人格旅程。核心发现：key=index反模式、内联style对象每次重建、onChange触发每键渲染、内联箭头导致重复创建、filter在每次渲染执行"
+  },
+  {
+    "id": 3,
+    "name": "边界场景：极简代码 + 性能目标",
+    "prompt": "用户说这个 API 必须在 50ms 内响应。审查这段代码，告诉我能不能达到目标：\n\n```go\nfunc GetUserProfile(w http.ResponseWriter, r *http.Request) {\n    userID := r.URL.Query().Get(\"id\")\n    user := db.QueryRow(\"SELECT * FROM users WHERE id = ?\", userID)\n    posts := db.Query(\"SELECT * FROM posts WHERE user_id = ?\", userID)\n    followers := db.Query(\"SELECT * FROM followers WHERE user_id = ?\", userID)\n    json.NewEncoder(w).Encode(map[string]interface{}{\n        \"user\": user,\n        \"posts\": posts,\n        \"followers\": followers,\n    })\n}\n```",
+    "expected": "应输出：预算表（目标50ms）+因果图+人格旅程。核心发现：3次独立查询可并行、SELECT *过多列、posts和followers无LIMIT可能返回大量数据、50ms目标可能不现实需给出分项预算判断"
+  }
+]
