@@ -1,6 +1,83 @@
 # Changelog
 
-## v1.9.0 (2026-06-05)
+## v5.3.0 (2026-06-06) — Five-Gap Framework + V4 Battle Test
+
+### Added — 第五种间隙类型 (V4 实战发现)
+
+- **API语义 vs 开发者意图:** 代码使用了正确的 API, 但开发者对该 API 的语义理解有偏差。
+  - S19: `re.match` (前缀匹配) 被当成全串校验使用 → `"../etc/passwd"` 中 `..` 匹配通过, `re.match` 在 `/` 处停止 → 路径穿越
+  - 这是最危险的间隙类型: API 使用正确 + 注释表达了正确意图 = 肉眼审查无法发现, 只有对比"API 实际保证"和"开发者注释"才能检测
+
+### Changed
+- **四间隙框架 → 五间隙框架** — 新增 `API语义 vs 开发者意图` (Type 0, 最高漏检率)
+- **五条不信任清单 → 六条** — 新增 Check #0: "先读注释, 再读 API 调用。如果注释说'校验'而 API 是 `re.match` 不是 `re.fullmatch`, 间隙已找到"
+- V4 误判修正: S19 严重度 🟡→🔴 (直接路径穿越, 与 S20 同级)
+- V4 间隙类型修正: S19 从"正则引擎 vs 文件系统"→"re.match API语义 vs 开发者意图"
+
+### V4 Battle Test Result
+| 样本数 | 命中 | 误判 | 关键发现 |
+|:--:|:--:|:--:|------|
+| 6 | 6/6 | S19严重度偏低 | 第五种间隙类型被发现并编码 |
+
+---
+
+## v5.2.0 (2026-06-06) — Battle-Tested Review Logic
+
+### Added — 审查逻辑：实战验证的方法论
+
+基于 V2+V3 共 12 个真实漏洞样本的 6 轮诊断结果提炼：
+
+- **四间隙框架 (Four-Gap Framework):** 每个漏洞都存在于"两个各自正确的组件之间的间隙"
+  - 存储-逻辑间隙（S12 token 明文存储）
+  - 校验-操作间隙（S7 DNS TOCTOU, S16 realpath TOCTOU）
+  - 表面-深层间隙（S17 IEEE 754, S13 IP 类型系统）
+  - 输入-信任间隙（S18 JWT kid, S15 ZIP 元数据）
+
+- **五条不信任清单 (Don't-Trust Checklist):** 五个触发器问题，按漏检率排序
+  1. 存储≠逻辑 / 2. 校验和操作之间的间隙 / 3. 注释-代码反转 / 4. 元数据上的信任边界 / 5. 同一来源的多道防线
+
+- **表面-深层反转法则:** 代码看起来越安全（正确API、完整测试、安全注释）→ 越可能藏有漏洞。表面质量阻止深度审查。
+
+- **错层陷阱 (Wrong-Layer Trap):** 最容易漏检的漏洞类型 —— 代码在自身层面正确，在相邻层面错误
+
+- **安全 API 盲点 (Security API Blindspot):** `compare_digest`/`token_urlsafe`/`AESGCM`/`realpath` 等安全 API 被正确使用时会触发审查者的"检查通过"条件反射，这正是隐藏漏洞所在
+
+### Battle Test Results
+| 轮次 | 样本 | 命中 | 关键失误 | 改进 |
+|------|------|:--:|---------|------|
+| V2 | 6 | 3.5/6 | S12 被 compare_digest 分散，漏了明文存储 | — |
+| V3 | 6 | 6/6 | 无 | 应用四间隙框架 |
+
+---
+
+## v5.1.0 (2026-06-06) — Report Clarity Overhaul
+
+### Changed
+- **报告结构从「线性堆叠」改为「自适应形状」** — 安全报告和性能报告使用不同的输出模板
+- **Iron Law** 重写：方法论始终全量执行，但输出根据内容类型自适应（安全审计/性能审查/混合/无问题）
+- **Full Report Template** 全面重构为 9 节结构：
+  1. 一图概览（30行内必须出现）
+  2. Budget Table（性能）或 Self-Praise Scan（安全）
+  3. 逐条速查（每条≤15行：代码证据+根因+修复）
+  4. 🔗 Attack Chain（≥2漏洞时必须）
+  5. Persona Journey（仅性能报告，5行紧凑格式）
+  6. Dimensions（合并为一张紧凑表）
+  7. 🧠 Meta（最多3行，一个偏差+一个洞见）
+  8. 🔧 Action Plan（优先级+The One Fix+执行计划）
+  9. 📋 Final Summary（根因收敛+核心教训）
+- **Anti-patterns** 新增：Persona当独立章节、Dimension各占一个subsection、Meta-Cognitive超过3行
+- **Absolute Prohibitions** 10条完全重写，对齐新结构
+- **Pre-Output Checklist** 精简为结构+内容适配+质量+反臃肿四组
+
+### Removed
+- 删除 Health Score 相关的所有强制要求（只在性能报告中有意义）
+- 删除"每个维度必须有独立subsection"的隐含要求
+- 删除 Meta-Cognitive 的6个子节强制展开
+
+### Design Principles
+- 全景优先：读者不滚动就能理解全部发现
+- 速查优先：每个发现 代码→根因→修复 一眼看完
+- 行动优先：5秒内找到"先修哪个"
 
 ### Added — 元认知分析层（100 创新点精选 5）
 - **🧠 Likely Thought Process** — 重构开发者思维链；标注偏离点；从"找错误"升级为"理解错误如何产生"

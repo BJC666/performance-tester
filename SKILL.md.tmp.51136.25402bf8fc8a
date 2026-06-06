@@ -11,7 +11,7 @@ description: >
 license: MIT
 compatibility: No dependencies. Pure static code analysis. Works with any programming language or framework. No network access required.
 metadata:
-  version: "5.3.0"
+  version: "5.0.1"
   author: "BJC666"
   tags: [performance, profiling, bottleneck, optimization, diagnosis, latency, budget, causal-graph, entropy]
 ---
@@ -22,39 +22,34 @@ metadata:
 
 Performance diagnosis: 3 phases + 7 dimensions + 7 rules + meta-cognitive layer + continuous learning.
 
-**Pipeline (Defense-Grade):** 1. 📚 Pattern Lookup → 2. 🧬 Self-Calibrate → 3. ✅ Clean Bill → 4. ⏳ Trust Decay+ZDS → 5. Phase 1 (Budget, skip output if security-only) → 6. Phase 2 (Causal+16 Vuln Types+🔗Attack Chain) → 7. Phase 3 (Persona, skip output if security-only) → 8. 📊 Dimensions (compact table) → 9. 🧠 Meta (1 insight max) → 10. 🔨 Action Plan → 11. 📋 Final Summary → 12. ✅ Checklist
+**Pipeline (Defense-Grade):** 1. 📚 Pattern Lookup → 2. 🧬 Self-Calibrate → 3. ✅ Clean Bill → 4. ⏳ Trust Decay+ZDS → 5. Phase 1 → 6. Phase 2 (Causal+16 Vuln Types+🔗Attack Chain) → 7. Phase 3 → 8. 📊 10 Dimensions → 9. 🧠 Meta-Cognitive → 10. 🚨 Incident Response → 11. 🔨 Action Plan → 12. ✅ Checklist
 
-**Phases (always run internally; output adapts to content):** Budget Planning · Causal Reasoning · Persona Narrative
-**Dimensions (always in compact table):** ⏳ Debt · 👻 Ghost Load · 💣 Blast Radius · 🕳️ Time Leak · 📐 Entropy · ⚔️ Immune · 🗺️ Trust Boundary · 🏰 Auth Flow · 🛡️ Defense-in-Depth · 🔌 Supply Chain
+**Phases:** Budget Planning (FIXED/ELASTIC) · Causal Reasoning (leverage bottleneck) · Persona Narrative (BEFORE/AFTER journey)
+**Dimensions:** ⏳ Debt · 👻 Ghost Load · 💣 Blast Radius · 🕳️ Time Leak · 📐 Entropy · ⚔️ Immune · 🗺️ Trust Boundary · 🏰 Auth Flow · 🛡️ Defense-in-Depth · 🔌 Supply Chain
 **Rules:** Concrete Fixes(+Fixability Gate) · Confidence Labels · The One Fix · Failure Story · Emotional Variety · Adversarial Self-Challenge · Execution Plan
-**Report Shape:** 一图概览 → 逐条速查 → Attack Chain(if any) → Action Plan → Final Summary
+**Meta-Cognitive:** 🧠 Thought Process+🔮Reverse Prompt · 🧠 Cognitive Bias(+🪤Self-Praise) · 🧠 Knowledge Boundary · 📊 Decision Quality · ⚡ Fatigue Signals · 🩺 Differential Diagnosis · 💎 Surface-Deep Decoupling · 🦠 Contagion · 🧟 Zombie Paths
 **Interaction:** 💬 Socratic · ⚖️ Debate · 🏥 Teaching Hospital
 
 ## Iron Law
 
-**ALL THREE PHASES MUST BE EXECUTED INTERNALLY. OUTPUT ADAPTS TO CONTENT TYPE.**
+**ALL THREE PHASES MUST RUN. AT LEAST ONE ADVANCED DIMENSION MUST BE APPLIED. NO EXCEPTIONS.**
 
-The methodology runs in full every time. What appears in the report depends on what the code IS:
-
-| Content Type | Phase 1 (Budget) | Phase 2 (Causal+Vuln) | Phase 3 (Persona) | Dimensions |
-|-------------|:--:|:--:|:--:|:--:|
-| **Security audit** (vulnerabilities found) | Skip output — state "安全审计模式" | Full output — this IS the report | Skip output — security reports don't need personas | Merge into one compact table |
-| **Performance review** (latency issues found) | Full budget table | Full causal graph + bottleneck ranking | Compact persona (5-line sidebar) | 2-3 most relevant in compact table |
-| **Mixed** (both security + performance) | Compact budget (top 3 layers) | Full causal + vuln sections | Skip unless user asks | 2-3 most relevant in compact table |
-| **Clean bill of health** (nothing found) | N/A | N/A — issue Clean Bill certificate | N/A | N/A |
-
-**The report SHAPE changes. The methodology DOES NOT.**
+These requirements apply at EVERY output depth. A shorter report is not a skipped phase.
 
 | Requirement | ⚡ Quick Mode | 📋 Standard Mode | 🔬 Deep Mode |
 |-------------|-------------|-----------------|-------------|
-| Overview Diagram | 一图概览 (all findings in one ASCII) | 一图概览 + Causal Graph | 一图概览 + Full Causal Graph + Attack Chain |
-| Per-Finding Cards | Code evidence + 1-line fix each | Code evidence + root cause + concrete fix | Full differential diagnosis + fix alternatives |
-| Budget (perf only) | Top 3 layers | Full table | Full + per-function sub-budget |
-| Persona (perf only) | Skip or 2-line inline | 5-line compact sidebar | Full BEFORE/AFTER journey |
-| Dimensions | ≥1 in compact table | 2-3 in compact table | All 5 in compact table |
-| Action Plan | Priority numbers + The One Fix | Full priority table + Execution Plan | Priority + Execution + Monitoring + Self-Challenge |
+| Phase 1: Budget | Compact table (top 3 layers) | Full table (all layers) | Full table + per-function sub-budget |
+| Phase 2: Causal Graph | Top 3 nodes, leverage scores, key bottleneck | Full graph, all nodes, bottleneck ranking | Full graph + cross-file edges + fix simulation with numbers |
+| Phase 3: Persona | Compact BEFORE journey + one-line projected AFTER | Full BEFORE and AFTER journeys | Full BEFORE + AFTER + multi-persona for secondary paths |
+| Dimensions | ≥1 (auto-pick most relevant) | 2-3 (auto-select) | All 5 |
+| Concrete Fixes | Top 3 fixes with code | All P0/P1 fixes with code | All fixes with code + alternative approaches |
+| Health Score | Score + top penalty source | Score + per-layer penalty breakdown | Score + per-layer breakdown + sensitivity analysis |
 
-**No exceptions — not for "simple files," "obvious problems," "quick checks." Quick Mode handles those without skipping methodology.**
+**Quick Mode IS the full methodology executed at compact depth. A compact budget IS a budget. A 3-node graph IS a causal graph. A BEFORE-only persona IS a complete Phase 3 at Quick depth.**
+
+**No exceptions — not for "simple files," "obvious problems," "quick checks," "just a list," or "seems unnecessary." Quick Mode handles those cases without skipping phases.**
+
+**Violating the letter of the three phases + dimensions is violating the spirit of this methodology.**
 
 ## Output Quality Rules
 
@@ -298,7 +293,40 @@ All three OK → proceed with calibrated confidence.
 
 ## When to Use
 
-Triggers: "性能审查" / "perf review" / "why is this slow" / "瓶颈分析" / "帮我看看性能" / 代码粘贴 + 分析请求 / PR diff. If code provided → run diagnosis. If no code → ask for code. Only constraint: no code = no analysis.
+```
+User asks: "性能审查" "perf review" "why is this slow"
+           "瓶颈分析" "performance audit" "帮我看看性能"
+                │
+                ▼
+         Is code provided or
+         available to read?
+            │         │
+           YES       NO
+            │         │
+            ▼         ▼
+     Run full       Ask user to
+     three phases   provide code
+            │
+            ▼
+    ┌──────────────────────────┐
+    │ ALWAYS run all 3 phases: │
+    │ 1. Budget (use defaults  │
+    │    if no goal given)     │
+    │ 2. Causal graph          │
+    │ 3. Persona journey       │
+    └──────────────────────────┘
+```
+
+**When to use:**
+- User explicitly asks for performance review / audit / diagnosis
+- User asks "why is this slow" or "where is the bottleneck"
+- User asks "帮我看看性能" or "这段代码有什么性能问题"
+- User wants optimization recommendations with priority
+- Reviewing a PR specifically for performance impact
+- Analyzing a single file or a full request lifecycle
+
+**When NOT to use:**
+- When there is no code to analyze
 
 ## Clean Bill of Health Protocol
 
@@ -507,13 +535,34 @@ The user may provide runtime data by pasting text (not file paths or URLs):
 
 ### Integration Rules
 
-| Rule | Action |
-|------|--------|
-| 1. Calibrate budgets | Mark: `[measured]` (real) / `[estimated]` (inferred) |
-| 2. Label edges | `[C]` CONFIRMED / `[H]` HYPOTHESIZED / `[I]` INFERRED |
-| 3. Data wins ties | Contradicts static → note and revise |
-| 4. No data, no block | Proceed with confidence labels |
-| 5. Biggest gap | ≥3 paths + 0 data → ⚠️ Data-Poor Warning |
+**Rule 1 — Data calibrates budgets:** When runtime data shows actual latencies,
+replace static estimates with measured values. Mark budget table rows:
+- `[measured]` — backed by runtime data
+- `[estimated]` — static analysis inference
+
+**Rule 2 — Data confirms or refutes causal edges:** A hypothesized edge
+becomes a CONFIRMED edge when runtime data shows temporal correlation.
+Label every causal graph node:
+- `[C]` CONFIRMED — backed by measurement
+- `[H]` HYPOTHESIZED — static analysis, unverified
+- `[I]` INFERRED — consistent with runtime data but not directly measured
+
+**Rule 3 — Data wins ties:** If runtime data contradicts a static finding,
+the data takes priority. The contradiction MUST be explicitly noted:
+"Static analysis suggested [X], but runtime data shows [Y]. The causal
+graph has been revised accordingly."
+
+**Rule 4 — Missing data is not a blocker:** If no runtime data, proceed
+with pure static analysis. The confidence labels handle the difference.
+[H] nodes are valid; they're just less certain.
+
+**Rule 5 — Flag the biggest gap:** If zero runtime data AND the code has
+≥3 distinct code paths, append a one-paragraph **Data-Poor Warning** to the report:
+
+> ⚠️ **Data-Poor Analysis:** This diagnosis is based entirely on static
+> analysis. The following 1-2 data points would most increase confidence:
+> - [specific metric]: [what it would confirm]
+> - [specific metric]: [what it would confirm]
 
 ---
 
@@ -549,98 +598,15 @@ For each function analyzed, scan for decay signals since its last review:
    Recommendation: [Re-review / Monitor / No action].
 ```
 
-**Rule:** If no git history → "trust decay N/A". ZDS = (depth × exposure × privilege) / isolation; >70 🔴.
+**Rule:** Apply to the primary function being analyzed. If no git history is available,
+state "No version history available — trust decay cannot be assessed."
 
----
+Theoretical foundation: 🌡️ Software Thermodynamics — entropy only increases in unmaintained code.
 
-## 审查逻辑 — Battle-Tested Review Heuristics
-
-These heuristics are validated across 12 real vulnerability samples (V2+V3).
-They encode what distinguished the 6/6 V3 diagnosis from the 3.5/6 V2 diagnosis.
-
-### The Five-Gap Framework
-
-Every vulnerability exists in a **gap between two things that are individually correct**.
-Finding vulnerabilities = finding gaps. The five gap types, in order of how often they're missed:
-
-| Gap Type | Question to Ask | Example | Miss Rate |
-|----------|----------------|---------|:--:|
-| **API语义 vs 开发者意图** | "This API is called correctly. Does the developer understand what it ACTUALLY does?" | S19: `re.match` validates prefix only, developer assumed full-string validation | Highest |
-| **存储-逻辑间隙** | "The logic is correct. How is the data *stored*?" | S12: token verification logic perfect → token stored as plaintext dict key | Highest |
-| **校验-操作间隙** | "The check passed. What happens *between* the check and the operation?" | S7: DNS checked at T1 → HTTP lib re-resolves at T2 | High |
-| **表面-深层间隙** | "The code looks correct. What did the developer *assume* that's wrong?" | S17: `float` multiplication is mathematically correct → IEEE 754 isn't math | High |
-| **输入-信任间隙** | "This value comes from outside. Where does it cross into a trusted context?" | S18: `kid` from unverified JWT header → directly spliced into file path | Medium |
-
-**The API-intent gap (type 0) is the most dangerous because:**
-1. The API is used *correctly* — no amount of code review of the call site finds the bug
-2. The bug is in the developer's *understanding* of the API, which is invisible in code
-3. Both the calling code AND the API itself are individually correct
-4. Detection requires comparing "what the developer wrote in comments/docstring" against "what the API actually guarantees"
-5. **Unlike the other four gap types, this is a single-system cognitive gap** — no second system needed. The gap is between the API's documented behavior and the developer's mental model of that behavior. `lru_cache` says "returns cached value" but the developer never translated "same object reference" into security consequences for callers who mutate the return. |
-
-### The Don't-Trust Checklist
-
-For EVERY function being reviewed, check these six things. They are ordered by how often
-they reveal missed vulnerabilities:
-
-| # | Check | Trigger Question | Caught |
-|---|-------|-----------------|--------|
-| 0 | **API ≠ Developer Intent** | "The API is used correctly. Does the comment/docstring reveal the developer misunderstood what it does?" | S19: `re.match` used but developer thought it validates the whole string |
-| 1 | **Storage ≠ Logic** | "Data is verified before use. How is it *stored*?" | S12 plaintext token, S11 token in memory dict |
-| 2 | **Gap between check and use** | "A security check happened. What happens in the microseconds/lines between check and actual operation?" | S7 DNS TOCTOU, S16 realpath TOCTOU, S21 async lock release |
-| 3 | **Comment-Code inversion** | "Comment says 'safe/secure/protected' — does the code actually do what the comment claims?" | S13 '覆盖全部RFC', S14 '防止时序攻击', S17 'float提供足够精度' |
-| 4 | **Trust boundary on metadata** | "This value controls a security decision. Who controls this value?" | S15 ZIP metadata, S18 JWT kid header |
-| 5 | **Same-source defense illusion** | "Multiple defenses exist. Do they all read from the same untrusted input?" | S15: 4 defenses, all read `info.file_size` from attacker |
-
-**Check #0 is run by reading the COMMENT first, then the API call.** If the comment says "validate" and the API is `re.match` (not `re.fullmatch`), the gap is already found.
-
-### The Surface-Deep Inversion Rule
-
-```
-If code LOOKS more secure than average (proper APIs, comprehensive tests,
-security comments, RFC citations) → it's MORE likely to contain hidden vulns,
-not less. The surface quality deters deep review. The bugs that survive
-to production are the ones that look correct.
-```
-
-**Statistical pattern (V2+V3):** Code sections with self-praise comments averaged
-1.0 vulnerabilities per section. Code sections with proper crypto APIs
-(`secrets.*`, `compare_digest`) had the SAME vulnerability density as those without —
-the APIs were used correctly but on the wrong problem.
-
-### The Wrong-Layer Trap
-
-The most-missed vulnerability type: **the code is correct at its own layer,
-wrong at an adjacent layer.** The adjacent layer is invisible in a code review.
-
-| Layer Visible in Code | Adjacent Layer (Invisible) | Vulnerability |
-|------------------------|---------------------------|---------------|
-| Python `ipaddress` type system | OS network stack routing | S13: IPv6Address → OS routes to 127.0.0.1 |
-| Python `float` arithmetic | IEEE 754 binary representation | S17: 0.29 → 0.28999... |
-| `os.path.realpath` normalization | Filesystem atomicity | S16: realpath resolves → FS changes → open follows new path |
-| ZIP central directory parsing | Deflate bitstream | S15: metadata says 1 byte → bitstream is 1GB |
-| JWT header parsing | Filesystem path resolution | S18: kid="default" → kid="../../etc" |
-
-**Rule:** For every API call, ask "what layer BELOW this API is making a different decision?"
-If the answer is non-trivial, there's probably a vulnerability there.
-
-### The Security API Blindspot
-
-When code uses a "security API" (`secrets.compare_digest`, `secrets.token_urlsafe`,
-`AESGCM`, `os.path.realpath`), reviewers unconsciously check the box and move on.
-This is exactly where hidden vulnerabilities live.
-
-**The API was used correctly. The question is: was it the RIGHT API for THIS threat?**
-
-| Code Uses | Protects Against | Actual Threat | API Mismatch |
-|-----------|-----------------|---------------|-------------|
-| `compare_digest` | Timing side-channel | Plaintext token storage | ✅ correct API, wrong layer |
-| `secrets.token_urlsafe` | Predictable tokens | State not bound to session | ✅ correct API, incomplete solution |
-| `AESGCM` | Encryption + authentication | Nonce reuse across restarts | ✅ correct API, wrong nonce construction |
-| `os.path.realpath` | Symlink traversal | TOCTOU between resolve and open | ✅ correct API, inherently racy pattern |
-
-**N+1 Rule:** When you see a security API used correctly, there is at least one
-more vulnerability nearby. Find it. Don't let the API close your investigation.
+### Zero-Day Susceptibility Score
+For each dependency: ZDS = (depth × exposure × privilege) / isolation.
+Depth: how deep in the call chain. Exposure: network-facing? Privilege: runs as root/admin?
+Isolation: sandboxed/containerized? ZDS > 70: 🔴 If this dep has a zero-day, full compromise is likely.
 
 ---
 
@@ -738,26 +704,109 @@ Step 1: Node Discovery
     - **Keystone species** (if this function is deleted, the entire module collapses. Not the most-called — the most structurally critical)
     - **Ecological niche overlap** (two functions doing the same thing → redundancy. One must be the canonical)
     - **Parasitic code** (consumes CPU/memory but produces no value — compute-and-discard at architectural scale)
+    - **String prefix/suffix match as security check** (`str.startswith`/`endswith`/`in` on URLs/paths/emails — string ops don't respect semantic boundaries. `"https://example.com.evil.com".startswith("https://example.com")` = True at string level, False at hostname level. Always validate structured data with its parser, not string ops.)
     - **Race conditions with performance impact** (read-modify-write without atomic operation:
       SELECT-then-UPDATE, check-then-act, increment without RETURNING/atomic ADD).
       These are BOTH correctness bugs AND performance risks — retry loops triggered
       by race failures amplify load under concurrency.
 
-**Vulnerability Detection:** 16 vulnerability types (Read-Modify-Write Race, SQL Injection, Connection Leak, Unbounded Input, Missing Timeout, ReDoS, Deadlock, TOCTOU, Timing Side-Channel, Token Lifecycle, Log Injection, DoS Amplification, Weak Crypto, Adversarial Obfuscation + crypto weakness checks). Full detection signatures in `references/dimensions.md`.
+**Vulnerability Detection — performance-adjacent bugs that escalate under load:**
 
-**Classification:** Tag every finding: `OWASP A01:2021 | CWE-XXX | MITRE TXXXX`. CWE precision is secondary to gap identification — the code evidence + root cause + fix is the actionable output.
+| Vulnerability | Detection Signature | Impact Under Load |
+|------|------|------|
+| **Read-Modify-Write Race** | SELECT → arithmetic → UPDATE on same row; no `FOR UPDATE`/atomic operation | Lost updates → retries ×N amplify load |
+| **SQL Injection** | String concatenation/interpolation building SQL; no parameterized queries | Plan cache disabled + security; DB CPU waste |
+| **Connection/Resource Leak** | `connect()`/`open()` without `try/finally` or context manager; no pool | Connection exhaustion under concurrency → cascading failures |
+| **Unbounded Input** | No `LIMIT`/`max`/bounds check on user-controlled size parameter; `while` loop with user-controlled exit | OOM / infinite loop under malicious or edge-case input |
+| **Missing Timeout** | Network/DB call without timeout parameter; no `Promise.race`/`signal` | Thread pool / connection pool exhaustion under degraded downstream |
+| **Regex DoS (ReDoS)** | Nested quantifiers `(a+)+b`; alternation inside repetition; untrusted input fed to regex | CPU 100% under crafted input; one request starves all others |
+| **Deadlock Potential** | Multiple locks/mutexes acquired in different orders across code paths | System freeze under specific concurrent access patterns |
+| **TOCTOU (Time-of-Check-Time-of-Use)** | `if exists(SELECT ...)` followed by `UPDATE/INSERT`; file `os.path.exists()` then `open()` | Race window widens under concurrency; correctness fails silently then cascades |
+| **Timing Side-Channel** | Non-constant-time comparison (`==` on secrets); branching on secret data; no `compare_digest`/`timing_safe_compare` | Attacker infers secrets from response time; 1 request = 1 bit leaked |
+| **Token Lifecycle Gap** | Missing step in token chain: generate→transmit→store→verify→refresh→revoke→destroy. Any missing step = risk | Token replay, indefinite validity, no revocation path |
+| **Log Injection Amplification** | User input controls log content; newlines in input → forged log entries; 1 byte input → MB of log output | Log forgery + disk exhaustion under attack |
+| **DoS Amplification** | 1 external request triggers N internal operations (N > 10); no rate limit | Attacker's 1 req/s = 1000 internal ops/s; CPU/DB exhaustion |
+| **Weak Cryptography** | DES/RC4/MD5(crypto)/SHA1(password); key <2048(RSA)/128(AES); ECB mode; static IV; `random.random()` not `secrets`; `verify=False`; SHA1 KDF not bcrypt | Data decryptable; MITM; forged signatures |
+| **Adversarial Obfuscation** | eval/exec via multi-layer indirection; string-split-execute; catch-block network call; misleading comments; uncommon dangerous function aliases | Deliberate backdoor or hidden logic — treat as hostile intent |
 
-**Reporting:** If vulnerabilities found → 🔒 section between Phase 2 and Phase 3.
+**Classification:** Tag every finding with OWASP/CWE/MITRE: `OWASP A01:2021 | CWE-284 | MITRE T1078`
+**Compliance:** Map to OWASP ASVS / SOC2 CC6.x / GDPR Art.25,32 / PCI DSS 3.4,6.5.1 where applicable.
 
-**🩺 Differential Diagnosis (P0/P1):** Name 2-3 alternatives, rule out with code evidence. `🩺 DIFFERENTIAL DIAGNOSIS for [finding]: Primary → ✗Alt A ✗Alt B. If wrong: [alternative].`
+**Reporting rule:** If any vulnerability detected → add a 🔒 VULNERABILITY section between Phase 2 and Phase 3.
+List: vulnerability name, location, fix, and whether it's also a performance risk or purely a correctness bug.
 
-**🪤 Comment-Code Audit + Self-Praise + 🧟 Zombie Paths:** Full tables in `references/dimensions.md`. Quick rules: (1) comment says "safe/secure" → verify code actually does it; (2) self-praise density > 0.05 → deep analysis; (3) unreachable branches = zombie paths hiding developer intent.
+**🩺 Differential Diagnosis — for every P0/P1 finding, exclude look-alike conditions:**
 
-**📝 Semantic + 🔍 Coverage + 🩺 Failure Pre-Flight:** `references/dimensions.md`. Quick: (1) open/close pairs must match; (2) enumerate empty/null/negative/concurrent/unicode inputs per function; (3) for each dependency: "if it fails, what cascades?"
+For each critical finding, list 2-3 alternative diagnoses that could produce similar symptoms.
+Then provide specific evidence from the code that rules them out.
 
-**🪤 Self-Praise:** CN keywords 安全/规范/标准, EN: secure/safe/correct. Density >0.05 = 🪤. Full table: `references/dimensions.md`.
+```
+🩺 DIFFERENTIAL DIAGNOSIS for [finding]:
+   Primary: [diagnosis] — [evidence]
+   ✗ [Alt A] — Ruled out: [code evidence]
+   ✗ [Alt B] — Ruled out: [code evidence]
+   Confidence: [H/M/L]. If wrong, most likely: [which alternative]
+```
 
-**🧟 Zombie Paths:** Overshadowed catch / impossible elif / unreachable callback / dead default. Check each branch reachability. Full table: `references/dimensions.md`.
+**Rule:** SAST tools give "findings." Differential diagnosis gives "findings with falsifiability."
+If you can't name an alternative, you haven't thought hard enough about whether you're right.
+
+**🪤 Comment-Code Contradiction Audit — scan EVERY comment against implementation:**
+
+| Comment Claims | Code Actually Does | Flag |
+|---------------|-------------------|:--:|
+| "环境变量加载/from env" | Literal assignment (`KEY = "string"`) | 🔴 |
+| "规范写法/生产规范/标准写法" | Code contains known anti-pattern | 🔴 |
+| "安全校验/验证/安全检查" | Missing actual validation logic | 🔴 |
+| "无XX漏洞/无XX问题" | That exact vulnerability is present | 🔴 |
+| "绝对安全/完全正确" | Any flaw exists | 🔴 |
+
+**Rule:** Read every comment. For each claim, verify the implementation matches.
+If comment says X and code does Y, the contradiction IS a finding.
+
+**📝 Semantic Field Completeness:** If the code has `create` but no `destroy`, `open` but no `close`,
+`lock` but no `unlock` — the semantic field is incomplete. Gaps indicate missing resource management.
+**Metaphor Coherence:** Do function names use consistent metaphors? `ShipOrder` + `SendEmail` = consistent transport metaphor. `ShipOrder` + `ProcessEmail` = mixed metaphor → cognitive friction.
+
+Report contradictions. Flag semantic gaps. Note metaphor conflicts.
+
+**🔍 Thought Coverage Enumeration — systematically enumerate input dimensions the developer may not have considered:**
+
+For each function, enumerate: empty/null · negative · zero · extremely large · concurrent · timeout · unicode · malformed.
+For each dimension: does the code handle it? If not → coverage blindspot.
+Report: `🔍 COVERAGE BLINDSPOT: [dimension] not handled. Risk: [what happens under this input].`
+
+**🩺 Systematic Failure Pre-Flight — simulate failure of ALL key dependencies, not just the top bottleneck:**
+
+For each external dependency (DB, cache, network, filesystem, external API): "If [dependency] fails/slows/returns garbage, what happens?"
+Trace the cascade. Find the weakest link that is NOT the highest-leverage node.
+Report: `🩺 WEAKEST LINK: [dependency]. If it fails: [cascade]. This is NOT the top bottleneck — it's the silent killer.`
+
+**🪤 Self-Praise Density Scan — count self-congratulatory keywords in comments:**
+
+Keywords (CN): 安全 规范 标准 正确 绝对 生产级 无漏洞 最佳实践 完全
+Keywords (EN): secure safe correct proper best-practice production foolproof bulletproof
+
+**Rule:** Count self-praise claims per code section. Density = claims / lines.
+If density > 0.05 (≥1 claim per 20 lines): flag with 🪤 and prioritize deep analysis.
+If density > 0.10 (≥1 claim per 10 lines): 🪤🪤 — the code is over-compensating.
+
+**Why:** 8-session statistical pattern: code with self-praise keywords averages 4.3 vulnerabilities
+vs 0.5 in code without. Comments emphasizing "safe/correct/standard" correlate with
+underlying insecurity — the developer is reassuring themselves, not the reader.
+
+**🧟 Zombie Code Path Detection — find branches that can never execute:**
+
+| Type | Signature | Example |
+|------|-----------|---------|
+| Overshadowed catch | `except SpecificError` placed AFTER `except Exception` | ExpiredSignatureError after Exception → never reached |
+| Impossible elif | Condition is subset of prior branch condition | `elif x < 5` after `if x < 10` → never true |
+| Unreachable callback | Callback registered but trigger condition never satisfied | `on_timeout(fn)` but no timeout configured |
+| Dead default | switch/match `default` when all cases exhaustively covered | All 7 days handled, `default` never fires |
+
+**Rule:** For each branch, check if any execution path can reach it. If not → 🧟 zombie path.
+Zombie paths hide bugs: they contain the developer's INTENT but are killed by code STRUCTURE.
+Report as: `🧟 Zombie Path: [intended behavior] unreachable because [structural reason]`.
 
 Step 2: Causal Edge Construction
   For each pair of nodes (A, B), check if A can cause B:
@@ -853,9 +902,83 @@ For each node in the graph, report:
 
 ## Phase 3: Persona Narrative Engine
 
-**Output only for performance reports. Skip output for security audits.**
+### Principle
 
-Give the request a persona (name, mission, budget, cargo) and tell its journey in first-person: BEFORE (each stage with ⏱💰emoji) → AFTER (projected after key fix). Emotional variety per Rule 5 — never reuse the same emotional word. Full template in `references/dimensions.md`.
+"Fix N+1 query at line 42" is forgettable.
+"I'm Dave, a product detail request. I was trapped in getProduct()
+for 480ms because it queried the database once for every related item.
+My budget was 150ms. I overspent by 220%." — that sticks.
+
+Humans make decisions based on stories and emotions, not just data.
+Give every analyzed request a *persona* — a name, a mission, a budget,
+and a first-person journey through the system.
+
+### Algorithm
+
+```
+Step 1: Create the Persona
+  Name: a human-readable name (e.g., "Penny the Product Request")
+  Mission: what is this request trying to accomplish?
+  Budget: the total time allowance (from Phase 1)
+  Cargo: what data does it carry through the system?
+
+Step 2: Tell the BEFORE journey
+  Walk through each lifecycle stage in chronological order.
+  For each stage, annotate:
+    ⏱ actual time spent
+    💰 budget allocated
+    😊 emotional state (🟢 breezy/effortless 🟡 uneasy/glancing 🟡 winded/expensive 🔴 trapped/suffocating 🔴 desperate/pleading)
+
+  For stages that exceed budget:
+    Use emotional, first-person language. Pick from the palette below.
+    NEVER reuse the same emotional word twice in one report.
+
+Step 3: Tell the AFTER journey
+  Same persona, but after the key bottleneck is fixed.
+  Walk the same stages with projected numbers.
+  Contrast: "Last time I spent 480ms here. Now: 42ms."
+
+Step 4: End with a health score and emotional resolution.
+  NEVER use "exhausted" or "feels great" — they are banned as overused.
+  BEFORE ending: pick from (drained, depleted, crushed, defeated, wrecked, hollow, shattered)
+  AFTER ending: pick from (weightless, liberated, invisible, crisp, effortless, gliding, unstoppable)
+```
+
+### Persona Journey Template
+
+```markdown
+╔══════════════════════════════════════════════════╗
+║  👤 Request Persona                             ║
+║     Name: [name]   Mission: [what it does]      ║
+║     Budget: [total]ms   Cargo: [data summary]   ║
+╚══════════════════════════════════════════════════╝
+
+┌─ [Name]'s Journey (BEFORE) ─────────────────────┐
+│                                                   │
+│  [emoji] [timestamp]  [stage description]         │
+│            ⏱ [actual]ms  💰 budget [budget]ms    │
+│            [emotional note if over budget]        │
+│                                                   │
+│  [repeat for each lifecycle stage...]             │
+│                                                   │
+│  ═══════════════════════════════════════════      │
+│  📊 Total: [sum]ms  🎯 Budget: [target]ms         │
+│  🏥 Health Score: [0-100]  😊 [emotional note]    │
+│                                                   │
+│  🔑 Key Bottleneck: [name]                        │
+│     Fix it → projected: [new total]ms             │
+│     ([savings]ms saved, [%] improvement)          │
+└───────────────────────────────────────────────────┘
+
+┌─ [Name]'s Journey (AFTER) ──────────────────────┐
+│                                                   │
+│  [same structure with projected numbers]          │
+│                                                   │
+│  ═══════════════════════════════════════════      │
+│  📊 Total: [new]ms  🎯 Budget: [target]ms         │
+│  🏥 Health Score: [new score]  😊 [happy note]    │
+└───────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -880,16 +1003,81 @@ Every report appends `📚 LEARN`: one transferable principle. "This happened be
 
 ## 🧠 Meta-Cognitive Analysis
 
-**Output ≤3 lines in report.** Understand HOW bugs were created and WHY they survived review.
+Beyond finding bugs, understand HOW the bugs were created and WHY they survived review.
 
-**🧠 Thought Process (top 1-2):** Trace developer's reasoning backwards from bug → 🔑 deviation point → 🔮 likely prompt that shaped approach.
+### 🧠 Likely Thought Process (for top 1-2 findings)
 
-**🧠 Cognitive Bias (top 1-2):** Map to: Confirmation / Anchoring / Availability / Overconfidence / Framing / Dunning-Kruger. Format: `🧠 [bias] — [why]. 🪤 [N] self-praise claims.`
+Reconstruct the developer's reasoning AND infer the instruction that produced it.
 
-**💎 Surface-Deep Decoupling:** `Surface: [X]/100. Deep: [Y]/100. Gap [+Z]. >50 🔴 Beautiful disaster / 30-50 🟡 Competent disguise / <30 🟢 Honest.`
+```
+🧠 LIKELY THOUGHT PROCESS:
+  Step 1: "[developer's likely goal]" → ✅/⚠️/❌
+  Step 2: "[next logical step]" → ✅/⚠️/❌
+  ...
+  🔑 DEVIATION POINT: Step [N]. [What knowledge would have prevented the entire chain].
 
+🔮 LIKELY PROMPT: "Write a function that [inferred goal], using [tech]."
+   Flaw: [why this instruction leads to the wrong solution]
+   Better prompt: "Write a function that [goal]. Choose the simplest solution."
+```
 
-**Deep Mode only:** 🦠 Contagion · 🧠 Knowledge Boundary · 📊 Decision Quality · ⚡ Fatigue · 🧟 Zombie Paths.
+**Rule:** Start from the bug and work backwards. The deviation point is where a reasonable person makes a specific, identifiable mistake. The prompt reveals what instruction shaped their approach.
+
+### 🧠 Cognitive Bias Mapping (for top 1-2 findings)
+
+Map the bug to the most likely cognitive bias that produced it. Use the bias library:
+
+| Bias | Code Signature |
+|------|---------------|
+| **Confirmation bias** | See 🪤 Comment-Code Contradiction Audit (Phase 2) — same signal, psychological root |
+| **Anchoring** | First-chosen approach clung to despite better alternatives existing. |
+| **Availability heuristic** | Recently-learned technique applied where inappropriate. |
+| **Overconfidence** | See 🪤 Self-Praise Analysis — same signal, cognitive root |
+| **Framing effect** | Problem framed as "how to use X" rather than "how to solve Y." |
+| **Dunning-Kruger** | Advanced feature used without understanding its semantics. |
+
+```
+🧠 COGNITIVE BIAS:
+   Most likely: [bias] — [why this code pattern matches]
+   🪤 Self-Praise signal (if applicable): [N] self-congratulatory claims found.
+      Density [HIGH/MEDIUM/LOW]. "Overconfident code tends to be under-tested code."
+```
+
+### 💎 Surface-Deep Decoupling
+
+Rate the gap between how good the code LOOKS and how good it IS.
+
+```
+💎 SURFACE-DEEP DECOUPLING:
+   Surface: [XX]/100 (naming, formatting, comments, structure)
+   Deep:   [XX]/100 (correctness, thread-safety, error handling, edge cases)
+   Gap:    [+XX] — [interpretation based on gap size]
+
+   Gap > 50: 🔴 Beautiful disaster. Reviewers give LGTM in 30 seconds.
+                Actually needs 30 minutes of deep analysis.
+   Gap 30-50: 🟡 Competent disguise. Looks solid, has hidden flaws.
+   Gap < 30: 🟢 Honest code. Looks about as good as it is.
+```
+
+### 🦠 Complexity Contagion Map (if applicable)
+
+Trace how one function's complexity infected its callers.
+
+### 🧠 Knowledge Boundary Detection
+[What does the developer NOT know? Map knowledge gaps from code evidence.]
+
+### 📊 Decision Quality Scoring
+[Rate each key design choice: Reasonable / Questionable / Wrong. Explain why.]
+
+### ⚡ Fatigue Signals
+[Rushed code fingerprints: inconsistent error handling, copy-paste residue, TODOs in critical paths.]
+
+### ⚖️ Code Ethics Note
+[If this were your code being reviewed, what would you want to hear? Frame the diagnosis with the same respect you'd want. Call out unfair technical debt distribution if visible — who is carrying the heaviest burden?]
+
+### 🧟 Zombie Code Paths (if any found)
+
+List branches that contain developer intent but can never execute.
 
 ---
 
@@ -927,38 +1115,262 @@ are relevant based on the code being analyzed.
 
 ---
 
-> **Dimension algorithms in `references/dimensions.md`** — load on demand.
+> **Dimension algorithms moved to `references/dimensions.md`.** Load on demand during Phase 7.
+> Includes: ⏳ Debt Interest · 👻 Ghost Load · 💣 Blast Radius · 🕳️ Time Leak · 📐 Entropy ·
 > Budget Table Template · Causal Graph Notation · Persona Journey Template ·
 > Vulnerability Detection Table · Comment-Code Contradiction Audit ·
 > Self-Praise Density Scan · Zombie Code Path Detection
 
-### Dimension 1: ⏳ Debt Interest
+### Dimension 1: ⏳ Performance Debt Interest Rate
 
-Growth curve of each problem. Algorithm: (1) identify growth driver (users/data/code paths), (2) estimate compound rate, (3) determine danger threshold, (4) compute TTI bracket (<1mo / 1-3mo / 3-12mo / >1yr). MVD: state whether each problem scales with growth or is static. Full algorithm+template: `references/dimensions.md`.
+**Concept:** Performance problems are not static — they compound as data
+and users grow. Like financial debt, a small performance issue today
+can balloon into a production incident tomorrow. This dimension
+quantifies the *growth curve* of each problem.
+
+**Algorithm:**
+```
+For each detected problem, estimate:
+
+1. Growth Driver: what scales this problem?
+   - User growth → linear (N+1, missing cache)
+   - Data growth → linear or quadratic (O(n²), full scan)
+   - Code path growth → step function (new feature branches)
+   - Time → logarithmic (cache warming, JIT optimization — good)
+
+2. Compound Rate (r):
+   r = estimated monthly growth rate of the driver
+   Example: user base grows 15%/month → r = 0.15
+
+3. Danger Threshold (D):
+   The point where this problem causes a production incident.
+   N+1: when DB connections exhaust (e.g., 200 concurrent users)
+   O(n²): when iteration count exceeds CPU budget (e.g., 10M iterations)
+   Missing cache: when cache miss rate exceeds DB capacity
+
+4. Time-to-Incident (TTI):
+   Estimate months until growth driver reaches danger threshold.
+   Doubling heuristic: at r%/month, doubling time ≈ 70/r months.
+   Always present as bracket label, never a decimal: <1mo / 1-3mo / 3-12mo / >1yr.
+   State your growth assumptions. Prefer user-provided data over estimates.
+```
+
+**Report Output:**
+```markdown
+### ⏳ Performance Debt Forecast
+
+| Problem | Now | r (monthly) | Danger at | TTI | Alert |
+|---------|------|-------------|-----------|-----|-------|
+| N+1 query: reviews | 80ms ×200 products | +12% user growth | 500 products (DB pool exhaust) | 8 months | 🟡 |
+| O(n²): findSimilar | 50ms ×1K items | +5% catalog growth | 10K items (10M iterations) | 47 months | ⚪ |
+| No pagination: reviews | stable | +20% reviews/user | 100K rows (OOM at 500MB) | 3 months | 🟡 |
+```
 
 ---
 
-### Dimension 2: 👻 Ghost Load
+### Dimension 2: 👻 Ghost Load Detection
 
-Computations whose results are never consumed. Detection: trace downstream consumers, enumerate fields actually read, compute Waste Ratio = unused/total. 🔴: >0.5 waste + >10ms/req. 🟡: >0.3 waste. MVD: list each data source with fields fetched vs fields used. Full patterns+template: `references/dimensions.md`.
+**Concept:** Dead code elimination removes code that never executes.
+Ghost Load Detection removes **computations whose results are never consumed**.
+The code runs correctly — but its output partially or fully evaporates downstream.
+
+This is distinct from dead code: the code is alive and executing on every request,
+but the work it does is wasted.
+
+**Detection Patterns:**
+
+| Pattern | Signature | Example |
+|---------|-----------|---------|
+| **SELECT * discard** | Query returns N columns, only K < N are accessed | `SELECT * FROM products` → only `name` and `price` used |
+| **Overfetch cascade** | API returns full objects, consumer only reads 2-3 fields | REST returns 50-field JSON, frontend uses 4 |
+| **Join bloat** | JOIN brings in data never referenced downstream | `LEFT JOIN categories` for category name, but `categoryName` already denormalized |
+| **Compute-and-discard** | A value is computed then passed through unused | `JSON.stringify(result).length` — stringifies entire result just to get a byte count, then discards the string |
+| **Preload waste** | Eagerly loaded associations never accessed | `Product.includes(:reviews, :images, :variants)` but only reviews are rendered |
+| **Map-then-filter inversion** | `.map().filter()` where `.filter().map()` would do less work | Mapping 1000 items then filtering to 10 — do filter first |
+
+**Algorithm:**
+```
+For each data source (query, API call, computed value):
+  1. Trace all downstream consumers of the result
+  2. Enumerate which fields/properties are actually read
+  3. Compute WASTE RATIO = unused_fields / total_fields
+  4. Compute WASTE COST = waste_ratio × call_cost × call_frequency
+
+  Waste Ratio > 0.5 AND Waste Cost > 10ms per request → 🔴 report
+  Waste Ratio > 0.3 → 🟡 report
+```
+
+**Report Output:**
+```markdown
+### 👻 Ghost Load Audit
+
+| Source | Total Fields | Used | Wasted | Waste Cost/Req | Waste/Day (10K req) |
+|--------|-------------|------|--------|---------------|---------------------|
+| `SELECT * FROM reviews` | 8 cols | 3 | 5 (62%) | ~15ms | 150s |
+| `JSON.stringify(result)` | full payload | byte count only | 99% | ~18ms | 180s |
+| Product API response | 12 fields | 4 | 8 (67%) | ~5ms | 50s |
+| **TOTAL ghost load** | | | | **~38ms/req** | **380s/day** |
+```
 
 ---
 
-### Dimension 3: 💣 Blast Radius
+### Dimension 3: 💣 Performance Blast Radius
 
-Impact surface if a function degrades. Compute BR = (affected_endpoints ×40 + affected_users ×30 + revenue_critical ×30) / 100. BR>70 🔴 company-level / >40 🟡 feature-level / <40 🟢 contained. MVD: count callers, estimate feature scope. Full algorithm+template: `references/dimensions.md`.
+**Concept:** Security engineering maps the "blast radius" of a vulnerability —
+how many systems/users are impacted if exploited. Performance deserves
+the same treatment. When a function degrades, who feels it?
+
+**Algorithm:**
+```
+For each critical function, compute:
+
+1. Direct Impact Surface:
+   - Which endpoints call this function?
+   - Which features do those endpoints serve?
+   - Which user segments use those features?
+
+2. Cascading Impact:
+   - If this function slows 2×, what times out downstream?
+   - If it fails entirely (error/timeout), what retry storms are triggered?
+   - What dependent services are affected?
+
+3. Business Impact Mapping:
+   Function → Endpoint → Feature → User Segment → Business Metric
+
+4. Blast Radius Score (0-100):
+   BR = (affected_endpoints / total_endpoints × 40)
+      + (affected_user_segments / total_segments × 30)
+      + (revenue_critical ? 30 : 0)
+
+   When total_endpoints or total_segments are unknown (single-file review):
+     Estimate from the function's role. A utility used by 3+ features → assume
+     affected_endpoints/total_endpoints ≥ 0.5. A leaf function with 1 caller →
+     assume ≤ 0.1. State your assumption.
+
+   BR > 70 → 🔴 WIDE BLAST: degradation = company-level incident
+   BR > 40 → 🟡 MODERATE: degradation = feature-level incident
+   BR < 40 → 🟢 CONTAINED: degradation affects small scope
+```
+
+**Report Output:**
+```markdown
+### 💣 Blast Radius Map
+
+| Function | Called By | Affected Features | Users | Revenue Impact | BR Score |
+|----------|-----------|-------------------|-------|---------------|----------|
+| `getProductList` | `/api/products`, `/api/search`, `/api/recommendations` | Product list, Search, Homepage recommendations | ALL users | Direct (browse→cart→purchase) | 🔴 85 |
+| `processOrders` | `/api/admin/orders` (internal) | Admin order management | Internal staff only | None direct | 🟢 15 |
+| `findSimilarProducts` | `/api/products/:id/related` | Product detail sidebar | 30% of sessions | Indirect (cross-sell) | 🟡 45 |
+```
 
 ---
 
-### Dimension 4: 🕳️ Time Leak
+### Dimension 4: 🕳️ Time Leak Detection
 
-Latency that grows over process lifetime without reset. Assess: (1) accumulation rate, (2) reset mechanism (Natural✅ / Manual🟡 / None🔴), (3) observability gap. MVD: check caches/queues/buffers for eviction. Full patterns+template: `references/dimensions.md`.
+**Concept:** A "memory leak" is memory that grows unboundedly over process
+lifetime. A **time leak** is response latency that grows gradually over
+process lifetime — each request is slightly slower than the last,
+and only a restart resets it.
+
+Time leaks are invisible in short benchmarks. They only manifest after
+hours or days of uptime.
+
+**Detection Patterns:**
+
+| Pattern | Mechanism | Signature in Code |
+|---------|-----------|-------------------|
+| **Cache pollution** | Cache fills with low-value entries; hit rate declines | Unbounded cache (no TTL, no LRU eviction) |
+| **Connection pool senescence** | Long-lived connections degrade; new ones are faster | No `maxLifetime` / `idleTimeout` on pool config |
+| **Listener accumulation** | Event listeners added but never removed | `addEventListener` without matching `removeEventListener`; `.on()` without `.off()` |
+| **Closure scope bloat** | Large objects retained in closures; GC takes progressively longer | Callbacks capturing entire request context instead of needed fields |
+| **Iterator/materialization creep** | Streaming results gradually materialized into memory | `.toArray()` on streaming query results; accumulating buffer without bound |
+| **Log buffer saturation** | In-memory log buffer grows; JSON.stringify on each flush | Unbounded in-memory log array before flush |
+
+**Algorithm:**
+```
+For each detected pattern, assess:
+  1. ACCUMULATION RATE: how fast does the degradation compound?
+     - Per-request: each request leaves a trace that slows the next
+     - Per-interval: degradation accumulates from background processes
+
+  2. RESET MECHANISM: does anything clear the accumulated state?
+     - Natural: TTL, LRU eviction, connection timeout → ✅ safe
+     - Manual: explicit cleanup call → 🟡 depends on being called
+     - None: only process restart clears it → 🔴 TIME LEAK
+
+  3. OBSERVABILITY GAP: would monitoring catch this?
+     - P95 latency over 24h uptime vs first hour uptime
+     - If delta > 20% AND no reset mechanism → CRITICAL
+```
+
+**Report Output:**
+```markdown
+### 🕳️ Time Leak Scan
+
+| Pattern | Location | Accumulation | Reset | 24h Degradation Est. | Verdict |
+|---------|----------|-------------|-------|---------------------|---------|
+| Cache pollution | `statsCache` Map, no eviction | Per-call (unique keys) | None | ~50ms after 100K calls | 🔴 Leak |
+| Log buffer growth | `handleRequest` in-memory array | Per-request | None | OOM after ~8h at 1K rps | 🔴 Leak |
+| Connection pool | N/A (not in this file) | — | — | — | ⚪ N/A |
+```
 
 ---
 
-### Dimension 5: 📐 Entropy
+### Dimension 5: 📐 Performance Entropy
 
-Unpredictable variance in response time. Algorithm: classify code paths by best/worst latency → STABLE (≤2×) / VARIABLE / CHAOTIC (≥3×). MVD: count distinct paths. Full algorithm+template: `references/dimensions.md`.
+**Concept:** Shannon entropy measures uncertainty in information.
+Applied to response time: a system with P50=100ms and P99=105ms has
+LOW entropy (predictable, stable). A system with P50=100ms and P99=2000ms
+has HIGH entropy (chaotic, unpredictable).
+
+Two APIs can have identical *average* response times but radically
+different user experiences. Entropy explains why: humans perceive
+**unpredictable slowness as worse than consistent slowness**.
+
+**Algorithm:**
+```
+Step 1: Count distinct code paths (cache hit/miss, small/large input, success/error).
+Step 2: For each path, estimate best-case vs worst-case latency from code structure.
+Step 3: If any path ≥3× the best-case path → HIGH entropy (CHAOTIC).
+        If all paths within 2× → LOW entropy (STABLE).
+        Otherwise → VARIABLE.
+Step 4: Place on Entropy-Latency matrix (below).
+```
+
+**Entropy vs Latency Matrix:**
+```
+                    LOW LATENCY              HIGH LATENCY
+  LOW ENTROPY    ✅ IDEAL                  🟡 Consistently slow
+                 Fast & predictable         Users adjust expectations
+
+  HIGH ENTROPY   🔴 WORST KIND             🔴 DOUBLE PENALTY
+                 Usually fast but           Slow AND unpredictable
+                 randomly terrible          Users never know what to expect
+                 "It worked fine yesterday"
+```
+
+**Report Output:**
+```markdown
+### 📐 Entropy Assessment
+
+| Function | Buckets | Distribution | Entropy (H) | Verdict |
+|----------|---------|-------------|-------------|---------|
+| `getProductList` | 3 paths | Cache=70%, Normal=20%, N+1=10% | H=1.16 | 🟡 Variable — 10% of requests hit the slow N+1 path |
+| `transformResponse` | 2 paths | Small=80%, Large=20% | H=0.72 | 🟡 Small variance, mostly predictable |
+| `findSimilarProducts` | 2 paths | n<100=95%, n>1000=5% | H=0.29 | ✅ Stable at current data sizes |
+
+### 🧭 Entropy-Latency Landscape
+
+     Low Latency ←──→ High Latency
+     ↑
+Low  │  ✅ findSimilar    🟡 transformResponse
+Ent  │  ✅ buildReport    🟡 processOrders
+     │
+     │  🔴 getProductList  🔴 getAllReviews
+High │  (10% requests      (any popular product)
+Ent  │   hit N+1 lottery)
+     ↓
+```
 
 ---
 
@@ -1003,224 +1415,106 @@ Report: `🔌 SUPPLY CHAIN: [N] deps. [X] known CVEs. [Y] unmaintained. Risk: [H
 
 ---
 
-## Report Design Principles
-
-**The report is for humans to read and act on. It is not a compliance checklist.**
-
-Three iron rules of report design:
-
-| Rule | Principle | Violation Signal |
-|------|-----------|-----------------|
-| **全景优先** | Reader must understand all findings in one screen without scrolling | Report has no overview diagram in the first 30 lines |
-| **速查优先** | Each finding fits in a single glance: code→root cause→fix | Any finding that takes >3 paragraphs to explain |
-| **行动优先** | Reader can find "what do I fix first" in under 5 seconds | The One Fix callout is buried after page 2 |
-
-**Anti-patterns that destroy readability:**
-
-| Anti-pattern | Why It Fails | Fix |
-|-------------|-------------|-----|
-| Vertical stacking of all phases as equal sections | Reader drowns in structure before reaching content | Merge phases into a unified narrative |
-| Persona as a standalone 50-line chapter | Theatrical fluff that readers skip | Integrate persona as a 5-line sidebar or omit in security-focused reports |
-| Every dimension gets its own `###` subsection | 10 empty or thin sections create visual noise | Merge all dimension findings into ONE compact table |
-| Meta-Cognitive as a separate chapter with 6 sub-sections | Pure navel-gazing after the actionable content | Reduce to 1-2 key insights embedded in the overview |
-| Budget table when there's no performance target | Meaningless ceremony | Skip Phase 1 table if no latency target exists; state "N/A — security audit mode" |
-
 ## Full Report Template
 
-The report SHAPE adapts to content. Two canonical shapes:
-
-```
-SECURITY-FOCUSED REPORT (vulnerabilities found)    PERFORMANCE-FOCUSED REPORT (latency issues found)
-═══════════════════════════════════════════         ═══════════════════════════════════════════════
-1. 一图概览 (Overview Diagram)                     1. 一图概览 (Overview Diagram)
-2. 逐条速查 (Per-Finding Quick Ref)                2. Budget Table
-3. 🔗 攻击链 (Attack Chain, if any)                3. Causal Graph + Bottleneck Ranking
-4. 修复优先级 (Priority + Execution Plan)          4. 逐条速查 (Per-Finding Quick Ref)
-5. 一句话根因 (One-Line Root Cause)                5. 修复优先级 (Priority + Execution Plan)
-                                                   6. Persona Journey (compact)
-```
-
-**Merge rule:** If both security AND performance issues found, use the security-focused shape
-and fold performance data into the quick-reference cards.
-
----
-
-### SECTION 1: 一图概览 (Overview Diagram)
-
-**Mandatory. Must fit in one screen. No exceptions.**
-
-ASCII diagram showing all findings and their relationships. Two formats:
-
-**Format A — Causal Tree (性能/架构问题):**
-```
-         [Root Cause]
-              │
-     ┌───────┼───────┐
-     ▼       ▼       ▼
-  [Symptom A] [Symptom B] [Symptom C]
-     │         │           │
-     └────┬────┘           │
-          ▼                │
-    [Cascading Failure] ◄──┘
-          │
-          ▼
-    🔑 KEY BOTTLENECK: [name] (Leverage: XX/100)
-```
-
-**Format B — Parallel Discovery Map (安全漏洞):**
-```
-S1: [漏洞名]     S2: [漏洞名]     S3: [漏洞名]
-    │                │                │
-    ▼                ▼                ▼
-[CWE-XXX]        [CWE-XXX]        [CWE-XXX]
-  🔴/🟡            🔴/🟡            🔴/🟡
-    │                │                │
-    └────────────────┼────────────────┘
-                     ▼
-         🔑 统一根因: [一句话]
-```
-
-Below the diagram: one-line summary. Format:
-```
-**文件:** [name] | **N 样本 / M 漏洞 / X CRITICAL + Y HIGH**
-**统一根因:** [one sentence that explains ALL findings]
-```
-
----
-
-### SECTION 2: Budget Table (性能报告) or Self-Praise Scan (安全报告)
-
-**Performance report → Budget Table (compact):**
-
-| Layer | Budget | Actual | Status |
-|-------|--------|--------|:--:|
-| [top 3-5 layers only] | XXms | XXms | 🔴🟡🟢 |
-
-If no performance target exists → skip this section. State: `**模式:** 安全审计 — 跳过延迟预算`
-
-**Security report → 🪤 Self-Praise Scan (compact):**
-
-| Location | Comment Claims | Reality | Signal |
-|----------|---------------|---------|:--:|
-| file:line | "安全/防护/密码学安全" | [what actually happens] | 🪤 |
-
-Only include if ≥3 self-praise comments found. Else skip.
-
----
-
-### SECTION 3: 逐条速查 (Per-Finding Quick Reference)
-
-**One card per finding. Each card = code evidence + root cause + fix. Maximum 15 lines per card.**
+Combine all three phases and relevant advanced dimensions into one cohesive output:
 
 ```markdown
-### S[N]: [漏洞/问题名]
-
-**位置:** `function_name` ([file](file#Lxx-Lyy))
-**严重度:** 🔴/🟡/🟢 | **CWE:** [if applicable]
-
-**根因:**
-```lang
-[the 2-5 lines of code that contain the bug — not the whole function]
-```
-
-**为什么是漏洞:** [1-2 sentences. What the developer assumed vs what actually happens.]
-
-**修复:**
-```lang
-[the corrected 2-5 lines of code]
-```
-```
-
-**Critical rule:** The code block MUST be the exact lines with the bug, not a description of them.
-The fix MUST be runnable replacement code.
+# 🔬 Performance Diagnosis Report
+**Target:** [file/API/PR name]
+**Analyzed at:** [timestamp]
+**Methodology:** Budget → Causal → Persona + [N active dimensions]
 
 ---
 
-### SECTION 4: 🔗 Attack Chain (安全报告 only, if ≥2 vulnerabilities found)
+## Phase 1: 🎯 Performance Budget
 
-```markdown
-🔗 ATTACK CHAIN: [Vuln A] → [Vuln B] → [Vuln C] = [final impact]
-   Individual severity: [X/Y/Z]. Chain severity: CRITICAL.
-   Break at: [weakest link] — [one-line fix].
-```
-
-If no chain possible (vulnerabilities are truly independent), state: "No attack chain — vulnerabilities are isolated."
+[Budget allocation table]
 
 ---
 
-### SECTION 5: Persona Journey (性能报告 only, or if user explicitly requests)
+## Phase 2: 🕸️ Causal Bottleneck Analysis
 
-**Compact inline format only. Not a separate chapter.**
-
-```markdown
-👤 **[Name]:** [One-line mission]. Budget: [X]ms.
-   BEFORE: [3-5 stage journey with per-stage ⏱/💰/emoji]. Total: [X]ms → 🏥 [score]/100.
-   AFTER:  [2-3 stage projection after key fix]. Total: [X]ms → 🏥 [score]/100.
-```
-
-**Security reports:** Skip persona unless the user asks for narrative. A security audit doesn't need a request persona.
+[ASCII causal graph + bottleneck ranking + fix simulation]
 
 ---
 
-### SECTION 6: Dimensions (compact table)
+## 🔒 Vulnerability Detection (if any found)
 
-**ALL active dimensions in ONE table. No individual subsections.**
-
-```markdown
-| Dimension | Finding | Severity |
-|-----------|---------|:--:|
-| ⏳ Debt | [worst TTI item] | 🟡 |
-| 👻 Ghost | [biggest waste source] | 🟢 |
-| 💣 Blast | [widest impact function, BR score] | 🔴 |
-```
-
-Rows with no findings → omit. If ALL dimensions are clean → skip this section entirely.
+[If vulnerabilities detected: list each with location, fix, and perf/correctness classification.
+Omit this section entirely if no vulnerabilities found.]
 
 ---
 
-### SECTION 7: 🧠 Meta (one insight only)
+## Phase 3: 👤 Request Journey
 
-**Maximum 3 lines. If there's nothing non-obvious to say, skip this section.**
-
-```markdown
-💎 **Surface-Deep Gap:** [score]/[score] — [one-line interpretation]
-🧠 **Root Cognitive Bias:** [bias] — [one-line why]
-```
+[Persona journey: BEFORE and AFTER]
 
 ---
 
-### SECTION 8: 🔧 Action Plan
+## 🧠 Meta-Cognitive Analysis
 
-```markdown
-## 🔧 修复优先级
+### 🧠 Likely Thought Process + 🔮 Reverse Prompt
+[Developer's reasoning chain + the instruction that shaped it — which step deviated]
 
-| # | 样本 | 操作 | 耗时 | 严重度 |
-|:--|------|------|:--:|:--:|
-| 1 | [name] | [one-line fix description] | Xmin | 🔴/🟡 |
+### 🧠 Cognitive Bias Mapping
+[Map bug to cognitive bias + 🪤 self-praise signal]
 
-🔨 **只修一个: [name]** — [one-line justification]
-
-⏱️ **执行计划:**
-| Time | Actions | 累计安全分 |
-|------|---------|:--:|
-| 🟢 5min | [quick wins] | XX/100 |
-| 🟡 1hr  | [deeper fixes] | XX/100 |
-```
+### 🧠 Knowledge Boundary · 📊 Decision Quality · ⚡ Fatigue Signals
+### 💎 Surface-Deep Decoupling
+### 🦠 Complexity Contagion (if any)
+### 🧟 Zombie Code Paths (if any)
 
 ---
 
-### SECTION 9: 📋 Final Summary (mandatory, compact)
+## Advanced Dimensions
 
-```markdown
-## 📋 总结
+### ⏳ Debt Interest Forecast
+[TTI table for degradation-prone problems]
+[If key bottleneck TTI < 12 months: add 2-3 sentence Failure Story here —
+ what happens at current growth rate, first symptom, escalation timeline.]
 
-| # | 漏洞 | 根因 | CWE | 严重度 |
-|:--|------|------|-----|:--:|
-| 1 | [name] | [one line] | CWE-XXX | 🔴 |
+### 👻 Ghost Load Audit
+[Waste ratio and cost per source]
 
-🔗 **根因收敛:** [All N findings converge to 1-2 root patterns. Name them.]
+### 💣 Blast Radius Map
+[Impact surface for each critical function]
 
-🏥 **核心教训:** [One transferable principle, one sentence.]
+### 🕳️ Time Leak Scan
+[Gradual degradation patterns found]
+
+### 📐 Entropy Assessment
+[Entropy-latency landscape matrix]
+
+### ⚔️ Immune System Analysis
+[8-defense checklist: which are present, which are missing, weakest gap]
+
+### 🗺️ Trust Boundary Map
+[Data path from untrusted→trusted with validation at each crossing]
+
+### 🏰 Auth Flow Integrity · 🛡️ Defense-in-Depth · 🔌 Supply Chain
+[Dimensions 8-10: auth flow gaps, 7-layer defense rating, dependency risk]
+
+---
+
+## 🔧 Prioritized Recommendations
+(Format: see Output Quality Rules 1, 1b, 2. Confidence: HIGH=mechanical/within20%, MEDIUM=varies/within50%, LOW=order-of-magnitude.)
+
+| Priority | Problem | Location | Fix | Est. Impact | Confidence | Effort | Regression Risk | TTI |
+|----------|---------|----------|-----|-------------|------------|--------|-----------------|-----|
+| 🔴 P0    | ...     | file:line| [concrete code] | -XXXms | H/M/L | Xmin | 🟢🟡🔴 + mitigation | 1mo |
+
+Regression: 🟢=monotonic improvement 🟡=changes execution order 🟡mitigation required 🔴=API contract change 🔴mitigation required
+
+🔨 **PRIORITY ACTIONS:** (Format: see Rule 3)
+⏱️ **EXECUTION PLAN:** (Format: see Rule 7)
+📊 **MONITORING:** [Metric | Alert Threshold | Dashboard]
+⚔️ **SELF-CHALLENGE:** (Format: see Rule 6)
+📋 **FINAL SUMMARY:** 🔒 Vulnerabilities + ⚠️ Drawbacks + 🔗 Root Cause Convergence tables
+
+🚨 **INCIDENT RESPONSE** (if 🔗 ATTACK CHAIN found):
+   THREAT: [chain summary]. IMMEDIATE (15min): [action]. SHORT (4hr): [patch].
+   LONG (7d): [architectural fix]. CONTACT: [role/team].
 ```
 
 ---
@@ -1301,52 +1595,57 @@ These are not guidelines. Violating any of them makes the diagnosis invalid.
 
 | # | NEVER | Why | If You Catch Yourself Doing It |
 |---|-------|-----|-------------------------------|
-| 1 | **NEVER output without 一图概览 in the first 30 lines** | Without an overview diagram, the reader is lost before reaching content. | Draw the ASCII diagram. 6 findings = 6 boxes. It takes 2 minutes. |
-| 2 | **NEVER describe a bug without showing the exact code lines** | "N+1 query in getProducts" is not a finding. Show the loop. | Paste the 3-5 lines. Then explain. |
+| 1 | **NEVER skip a phase** | Each phase feeds the next. A missing phase breaks the chain. | Delete the partial output. Start over from Phase 1. |
+| 2 | **NEVER output a problem list without budget** | Without budget, priorities are just intuition. The budget IS the diagnosis. | Go back. Write the budget table first. |
 | 3 | **NEVER present TTI as a precise number** | "8.3 months" from guessed growth rates is false precision. | Use bracket labels only: <1mo / 1-3mo / 3-12mo / >1yr. |
-| 4 | **NEVER bury The One Fix beyond the first screen** | Reader must find "what do I fix first" in under 5 seconds. | 🔨 callout goes in the Action Plan at the END — the last thing before signing off. |
-| 5 | **NEVER write a persona for a security audit** | A security audit has no "request journey." Personas are for latency stories. | Skip Phase 3 output. State "N/A — 安全审计模式." |
-| 6 | **NEVER give each dimension its own subsection** | 10 near-empty sections = visual noise that buries real findings. | Merge all dimensions into ONE compact table. Omit rows with no findings. |
+| 4 | **NEVER claim a health score without showing the penalty breakdown** | "Health Score: 72/100" with no derivation is a magic number. | Show the per-layer penalty calculation that produced the score. |
+| 5 | **NEVER use a generic persona** | "A request" is not a persona. No name = no story = no emotional weight. | Name it. Give it a mission. State its cargo. |
+| 6 | **NEVER apply a dimension without the report output table** | Mentioning "ghost load exists" without the waste table is not applying the dimension. | Produce the dimension's report table (waste ratio, BR score, TTI, H value). |
 | 7 | **NEVER argue with user-provided operational context** | The user knows their system. Static analysis doesn't. | Acknowledge → revise → record the assumption → move on. |
-| 8 | **NEVER output a Meta-Cognitive chapter longer than 3 lines** | Nobody needs a 6-subsection therapy session for the code. | One bias. One insight. Done. |
-| 9 | **NEVER recommend a fix without runnable replacement code** | "Use a JOIN instead" is a suggestion. Show the JOIN. | Every P0/P1 fix must include actual code in the reviewed language. |
-| 10 | **NEVER produce a report where the per-finding cards are the bulk of the scroll** | Each card >15 lines = reader lost. | Code evidence + root cause + fix. That's it. Move differential diagnosis to Deep mode only. |
+| 8 | **NEVER skip the AFTER journey in Standard/Deep mode** | Before-only narrative is just complaining. The AFTER shows it's fixable. | Write the AFTER journey with projected numbers. |
+| 9 | **NEVER output only problems without fixes** | Diagnosis without treatment is half the job. | Every 🔴/🟡 finding must have a concrete fix recommendation. |
+| 10 | **NEVER exceed the output mode's scope without user consent** | Quick mode producing 5000 words betrays user trust. | Stick to the mode. If you think it needs Deep, ask the user. |
 
-**Violating any of these = invalid diagnosis.**
+**Violating any of these = invalid diagnosis. Delete and restart from Phase 1.**
 
 ---
 
 ## Pre-Output Checklist — MANDATORY
 
-**Before presenting ANY report, verify these items. If any fails, fix before output.**
+**Before presenting ANY report, verify all items. If any item fails, fix it before output.**
 
-### Structure (report SHAPE)
-- [ ] **一图概览** in first 30 lines? (ASCII diagram with all findings + severity)
-- [ ] **逐条速查** cards: each ≤15 lines? Code evidence + root cause + fix?
-- [ ] **🔗 Attack Chain** constructed if ≥2 vulns? Skipped if <2?
-- [ ] **🔨 The One Fix** callout in Action Plan section?
-- [ ] **⏱️ Execution Plan** with 5min/1hr tiers + cumulative scores?
-- [ ] **📋 Final Summary** with all findings + 根因收敛 + 🏥?
+### Structure Check
+- [ ] Budget table present with FIXED/ELASTIC labels?
+- [ ] Causal graph present (≥1 node OK if Clean Bill; ≥2 otherwise) with 🔑 KEY BOTTLENECK labeled?
+- [ ] Persona journey: BEFORE required (all modes); AFTER: one-line (Quick) / full (Standard/Deep)?
+- [ ] At least 1 dimension (Quick) / 2-3 (Standard) / 5-7 (Deep)?
+- [ ] Meta-Cognitive: at least 🧠 Thought Process + 🪤 Self-Praise present?
+- [ ] New detection types scanned: Semantic Drift, Ghost Protocol, Logical Paradox, Batch Boundary, Refactoring Debris?
 
-### Content-Type Adaptivity
-- [ ] Security audit? → Persona skipped? Budget output skipped?
-- [ ] Performance review? → Budget table present? Persona ≤5 lines?
-- [ ] Mixed? → Security shape + perf data in quick-ref cards?
+### Quality Check (Rules 1-7)
+- [ ] **Rule 1 — Concrete Fixes:** Every P0/P1 fix includes runnable code in the same language as the reviewed code? (NOT "use a JOIN" — show the JOIN)
+- [ ] **Rule 2 — Confidence Labels:** Every time estimate annotated with (HIGH/MEDIUM/LOW confidence)? Search for any bare number followed by "ms" without a confidence label.
+- [ ] **Rule 3 — The One Fix:** `🔨 IF YOU ONLY FIX ONE THING` callout present after the recommendation table?
+- [ ] **Rule 4 — Failure Story:** Embedded in ⏳ Debt Interest section? (2-3 sentences after TTI table for key bottleneck)
+- [ ] **Rule 5 — Emotional Variety:** Scan the persona journey. Any emotional word used twice? Replace duplicates.
+- [ ] **Rule 6 — Adversarial Self-Challenge:** ⚔️ section present for top 2 recommendations?
+- [ ] **Rule 7 — Execution Plan:** ⏱️ table present with 5-min/1-hour/1-day tiers, cumulative health scores, and dependency notes?
+- [ ] **Continuous Learning:** `references/vulnerability-library.md` consulted before diagnosis? New patterns contributed after diagnosis (if any found)?
+- [ ] **Vulnerability Scan:** 8-type vulnerability detection executed? 🔒 section present if any found; explicitly omitted if none?
+- [ ] **Final Summary:** 📋 section present with 🔒 Vulnerabilities + ⚠️ Drawbacks tables + 🔗 Root Cause Convergence statement? Every vulnerability and drawback listed with root cause?
+- [ ] **Fix Propagation:** Pattern similarity scan attempted? Propagation targets reported (or explicitly stated as N/A)?
+- [ ] **🔨 Priority Actions + 📊 Monitoring:** Priority Actions block present? Monitoring table with alert thresholds?
+- [ ] **Vulnerability Scan:** 8-type + 4-new (Timing Side-Channel, Token Lifecycle, Log Injection, DoS Amplification) checked?
+- [ ] **Immune System + Trust Boundary:** ⚔️ Immune defenses checked (if applicable)? 🗺️ Trust boundary map drawn (if applicable)?
+- [ ] **Auth Flow + Defense-in-Depth + Supply Chain:** 🏰🏰 Auth gaps? 🛡️ 7-layer rated? 🔌 Dep risk?
+- [ ] **Attack Chain + OWASP + Crypto:** 🔗 Chain constructed? 🛡️ Vulns tagged OWASP/CWE/MITRE? 🔐 Crypto weaknesses checked?
+- [ ] **Incident Response:** 🚨 If attack chain, response protocol generated?
+- [ ] **Conservation of Fragility:** ⚡ Fragility transfer noted?
+- [ ] **Learn Section:** 🏥 One transferable principle?
 
-### Quality
-- [ ] Every P0/P1 has runnable replacement code? (Rule 1)
-- [ ] Every estimate has (HIGH/MEDIUM/LOW)? (Rule 2)
-- [ ] ⚔️ Self-Challenge for top 2? (Rule 6)
-- [ ] ⏱️ Execution Plan with cumulative scores? (Rule 7)
-- [ ] Vulnerability library consulted + patterns contributed?
-- [ ] All vulns tagged OWASP/CWE?
+### Accuracy Check
+- [ ] Any TTI presented as a precise number ("8.3 months")? → Replace with bracket label (<1mo / 1-3mo / 3-12mo / >1yr)
+- [ ] Any health score without penalty breakdown? → Add per-layer penalty calculation
+- [ ] Any absolute prohibition violated? (Check the 10-item NEVER list) → If yes, delete and restart
 
-### Anti-Bloat
-- [ ] Any per-finding card >15 lines? → Trim
-- [ ] Any dimension with its own `###`? → Merge to compact table
-- [ ] Meta-Cognitive >3 lines? → Cut to one bias + one insight
-- [ ] Total report >3 screens? → Too verbose, trim
-- [ ] Any TTI as precise number? → Bracket label only
-- [ ] Any absolute prohibition violated? (10-item NEVER list) → Fix
-
-**All checked → present.**
+**If all boxes checked → present the report. If any box unchecked → fix it first.**
